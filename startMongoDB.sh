@@ -1,11 +1,10 @@
 #!/bin/bash
 
-BASE_DB_PATH="./database"
-SECURITY_KEY_PATH="security.key"
-DB_PATH="./data/db"
-DATA_DB_PATH="$BASE_DB_PATH/$DB_PATH"
-REPLICATION_NAME="rs0"
-REPLICATION_NAME_CONFIG_FILE="$REPLICATION_NAME.conf"
+source ./config.sh
+
+
+
+
 
 
 function navigate_dir(){
@@ -42,7 +41,7 @@ replication:
 
 # Network interfaces
 net:
-  port: 27021
+  port: $port
   bindIp: 127.0.0.1
 
 # Security
