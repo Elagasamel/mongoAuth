@@ -1,21 +1,31 @@
 # mongoAuth
 
+This project provides scripts to configure **MongoDB authentication** with a **replica set**. It includes all necessary steps for setting up MongoDB, initializing a replica set, enabling authentication, and verifying the setup.
 
+---
 
-#### Step 1
+## Prerequisites
+- MongoDB installed
+- Bash shell (Linux / macOS)
+- Sufficient permissions to run MongoDB processes
+- Basic understanding of MongoDB replica sets and authentication
 
-1/ Open "config.sh" file 
+---
 
-2/ edit necessary  config variables 
+## Setup Steps
 
+### Step 1: Configuration
+1. Open the `config.sh` file  
+2. Edit the configuration variables according to your environment:
+   - MongoDB data directory
+   - Log file paths
+   - Replica set name
+   - Ports and authentication settings
 
+---
 
-#### Step 2
+### Step 2: MongoDB Initialization
 
-1/ Run the "startMongoDB.sh" to run mongod with necessary config 
-
-2/ Make sure the "startMongoDB.sh" is up . Run "replicaSetConfig.sh" to configure replica set 
-
-3/ Run "useAuth.sh" . The mongod script will be automatically down (if not make sure to stop the mongod process)
-
-4/ Run "startMongoDB.sh"
+1. Start MongoDB with the initial configuration:
+   ```bash
+   ./startMongoDB.sh
